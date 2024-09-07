@@ -184,11 +184,6 @@ a.nav-link:link{
 
 
 
-#content-wrapper {
-    grid-area: content;
-    background-color: #e1e8f0;
-}
-
 .link:hover{
     cursor: grab;
 }
@@ -203,4 +198,57 @@ a.nav-link:link{
     color: white;
     font-weight: 600;
     font-size: 1.1rem;
+}
+
+#content-wrapper {
+    grid-area: content;
+    background-color: #e1e8f0;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+            "cont announcement"
+            "cont trending";
+            padding-left: 20px;
+}
+
+
+#tile-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: clamp(100px,200px,);
+    column-gap: 15px;
+    row-gap: 15px;
+    grid-auto-rows: clamp(100px,200px,);
+
+}
+
+.tile{
+    background-color: white;
+    padding: 10px;
+    border-left: 5px solid #e7b63f;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 2px rgb(65, 65, 65,.20);
+}
+
+.tile-icons{
+    text-align: right;
+}
+
+
+.tile-header{
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.tile-content{
+    margin-top: 3px;
+    color: rgb(107, 107, 107);
+}
+
+
+.tile-icon{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
 }
